@@ -1,0 +1,17 @@
+{
+  "name": "primeprojects-odoo-integration",
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon --legacy-watch --watch src src/index.js",
+    "worker": "node src/invoiceQueueWorker.js",
+    "worker:dev": "nodemon --legacy-watch --watch src src/invoiceQueueWorker.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

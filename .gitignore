@@ -1,0 +1,21 @@
+### Python / Django ###
+__pycache__/
+*.py[cod]
+*.sqlite3
+.venv/
+.venv_check/
+*.egg-info/
+
+### Node ###
+node_modules/
+.next/
+npm-debug.log*
+
+### Env ###
+.env
+.env.*
+!.env.example
+
+### OS ###
+.DS_Store
+Thumbs.db

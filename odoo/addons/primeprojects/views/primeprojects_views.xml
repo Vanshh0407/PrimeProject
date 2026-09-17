@@ -1,0 +1,33 @@
+<odoo>
+  <record id="view_employee_form_primeprojects" model="ir.ui.view">
+    <field name="name">hr.employee.form.primeprojects</field>
+    <field name="model">hr.employee</field>
+    <field name="inherit_id" ref="hr.view_employee_form"/>
+    <field name="arch" type="xml"><xpath expr="//sheet" position="inside"><group string="PrimeProjects"><field name="primeprojects_external_id"/><field name="primeprojects_user_id"/></group></xpath></field>
+  </record>
+  <record id="view_project_form_primeprojects" model="ir.ui.view">
+    <field name="name">project.project.form.primeprojects</field><field name="model">project.project</field>
+    <field name="inherit_id" ref="project.edit_project"/><field name="arch" type="xml"><xpath expr="//sheet" position="inside"><group string="PrimeProjects"><field name="primeprojects_external_id"/></group></xpath></field>
+  </record>
+  <record id="view_task_form_primeprojects" model="ir.ui.view">
+    <field name="name">project.task.form.primeprojects</field><field name="model">project.task</field>
+    <field name="inherit_id" ref="project.view_task_form2"/><field name="arch" type="xml"><xpath expr="//sheet" position="inside"><group string="PrimeProjects"><field name="primeprojects_external_id"/><field name="primeprojects_phase_id"/></group></xpath></field>
+  </record>
+
+  <record id="view_move_form_primeprojects" model="ir.ui.view">
+    <field name="name">account.move.form.primeprojects</field>
+    <field name="model">account.move</field>
+    <field name="inherit_id" ref="account.view_move_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="PrimeProjects" name="primeprojects_invoice">
+          <group>
+            <field name="primeprojects_external_id"/>
+            <field name="primeprojects_source_invoice_id"/>
+            <field name="primeprojects_sync_state"/>
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

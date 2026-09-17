@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_primeprojects_sync_log_user,primeprojects.sync.log.user,model_primeprojects_sync_log,base.group_user,1,1,1,0
